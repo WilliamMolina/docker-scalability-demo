@@ -1,6 +1,76 @@
-<!doctype html>
-<html>
-   <body>   
-      <h1>Hello from {{ container }}!</h1>      
-   </body>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Docker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<style>
+    html {
+        min-height: 100%;
+        position: relative;
+    }
+
+    body {
+        margin: 0;
+        margin-bottom: 40px;
+        background-color: #00a2ef;
+        padding: 0;
+        margin: 0;
+    }
+
+    #swarmLogo{
+       margin: 40px 0px 20px 0px;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 80px;
+    }
+</style>
+
+<body>
+
+    <section class="container">
+        <div class="text-center">
+            <h1 class="text-white">DEMO ESCALABILIDAD</h1>
+
+        </div>
+        <div class="row">
+            <div class="col "></div>
+            <div class="col">
+                <div class="row">
+                    <div id="swarmLogo" class="col"><img src="../static/swarm.gif" alt="docker_logo" id="docker_logo" width="350px" height="300px"></div>
+                </div>
+                <div class="col">
+                    <div>
+                        <h3 class="text-white text-center">Hola desde <br/><b>[{{ container }}]</b></h3>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-info" id="btnLoad">Cargar p&aacute;gina</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </section>
+    <footer>
+        <div class="container text-center">
+            <p class="text-white">Escalabilidad de una aplicación usando Docker</p>
+            <p class="text-white">DEMO ESCALABILIDAD - SETI S.A.S - &copy; 2019</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("btnLoad").addEventListener("click", () => {
+            location.reload();
+        })
+    </script>
+</body>
+
 </html>
