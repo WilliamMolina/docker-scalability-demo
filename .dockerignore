@@ -1,0 +1,4 @@
+env/**
+screenshots/**
+docker-compose.yml
+README.md
