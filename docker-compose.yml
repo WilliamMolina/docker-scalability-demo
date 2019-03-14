@@ -1,0 +1,8 @@
+version: '3.3'
+services:
+    docker-scalability-demo:
+        ports:
+            - '5000:5000'
+        image: wondercode/scalability-demo:1.0
+        deploy:
+            replicas: 1

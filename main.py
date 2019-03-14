@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/hostname/")
 def return_hostname():
-    return "This is an example wsgi app served from {} to {}".format(socket.gethostname(), request.remote_addr)
+    return "<p>Este ejemplo muestra la escalabilidad de una aplicación usando Docker.</p><br>La p&aacute;gina fue cargada desde el contenedor {}".format(socket.gethostname())
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
